@@ -3,15 +3,6 @@ import os
 import eyed3
 from werkzeug.utils import secure_filename
 
-
-
-
-
-
-
-
-
-
 app = Flask(__name__)
 
 
@@ -23,7 +14,7 @@ def index():
 @app.route('/upload', methods=['POST'])
 def upload_file():
 
-  upload_directory = ''
+  upload_directory = '/files'
 
   if 'file' not in request.files:
     return jsonify({"error": "No file part"})
