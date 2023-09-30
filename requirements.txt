@@ -6,3 +6,4 @@ Jinja2==2.11.3
 MarkupSafe==1.1.1
 Werkzeug==1.0.1
 eyed3==0.9.7
+flask_cors==4.0.0
