@@ -11,6 +11,15 @@ def index():
   return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
 
 
+@app.route('/list_files', methods=['GET'])
+def list_files():
+  try:
+    files = os.listdir('/files')
+    return jsonify({"files": files}), 200
+  except Exception as e:
+    return jsonify({"error": str(e)}), 500
+
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
 
